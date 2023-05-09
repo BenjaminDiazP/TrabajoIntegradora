@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta chatset="utf-8">
+<title> Mi pagina web </title>
+
+</head>
+
+
+<body> 
+     
+ <img src="ute.png" alt= "mi imagen de prueba">
+    <p> Brandon Alfredo Hernandez Rodriguez </p>
+    <p> Estudio la carrera de DESARROLLO DE SOFTWARE </p>
+  <img ware="pt.png" alt= "mi imagen de prueba">
+    <p> Mi correo es: 20223tn060@utez.edu.mx </p>
+   
+    <p> Mi matricula es: 20223tn060 </p>
+    <img src="pt.png" alt= "mi imagen de prueba">
+
+    <p> mis estudios son la preparatoria prefeco temixco, estudie informatica </p>
+     <p> mis pasatiempos son jugar, salir a correr, musica, deportes </p>
+
+ <img ru="bal.png" alt= "mi imagen de prueba">
+
+ <img ru="corre.png" alt= "mi imagen de prueba">
+
+    <p><strong> HOLA  COMO  ESTAS. </strong></p>
+
+
+
+</body>
+<body bgcolor="lightgreen"></body>
+
+</html>
