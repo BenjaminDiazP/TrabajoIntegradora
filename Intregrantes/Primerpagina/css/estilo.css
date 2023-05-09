@@ -1,0 +1,31 @@
+img{
+    height: auto ;
+    width: 400px;
+    margin: auto;
+    right: auto;
+    left: auto;
+}
+
+.nombre{
+    color: red;
+    
+}
+.DSM{
+    color: aqua;
+}
+
+.correo{
+    color: brown;
+}
+
+.mat{
+    color: greenyellow;
+}
+
+.nivel{
+    color: chartreuse;
+}
+
+.pasatiempos{
+    color: darkmagenta;
+}
