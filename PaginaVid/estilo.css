@@ -1,0 +1,154 @@
+.seccion {
+  background-image: url(https://wallpaperaccess.com/full/2379010.jpg);
+  padding: 25px;
+  height: 489px;
+  border: 8px #323055 solid;
+  background-size: 1350px;
+  background-position: center;
+
+}
+
+.titulo {
+  color: rgb(205, 214, 153);
+  text-align: center;
+  font-size: 100px;
+  font-family: serif;
+  margin-top: 20px;
+
+
+}
+
+.bottonDescargar {
+  border: 1px solid #ffffff;
+  /*anchura, estilo y color borde*/
+  padding: 10px;
+  /*espacio alrededor texto*/
+  background-color: #000000;
+  /*color botón*/
+  color: #ffffff;
+  /*color texto*/
+  text-decoration: rgb(255, 255, 255);
+  /*decoración texto*/
+  text-transform: uppercase;
+  /*capitalización texto*/
+  font-family: 'montserrat', sans-serif;
+  /*tipografía texto*/
+  border-radius: 10px;
+  /*bordes redondos*/
+  font-size: 12px;
+
+
+
+}
+
+.btn {
+  position: relative;
+  display: block;
+  color: rgb(255, 255, 255);
+  font-size: 21px;
+  font-family: "montserrat";
+  text-decoration: solid;
+  margin: 450px 0;
+  border: 2px solid #ffffff;
+  padding: 14px 60px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s all ease;
+  margin-bottom: 150px;
+  display: flex;
+}
+
+.btn::before {
+  background: #000000;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+.btn1::before {
+  width: 0%;
+  height: 100%;
+}
+
+.btn1:hover::before {
+  width: 100%;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.descripcion {
+  text-align: center;
+  color: #793e3ec0;
+  font-size: 20px;
+  padding: px;
+  text-align: center;
+
+}
+
+.descripcion1 {
+  background-color: #000000;
+  margin-top: 180px;
+  text-align: center;
+  height: 255px;
+  border: 6px solid #323055;
+  padding: 1px;
+  background-image: url();
+  margin-bottom: 150px;
+
+}
+
+.imgLogo {
+  margin-bottom: 0;
+  height: 150px;
+  padding-left: 120%;
+}
+
+.link-image {
+  display: inline-block;
+  animation: pulse 1s infinite;
+
+}
+
+.logo {
+  height: 100px;
+
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.iconoRiot1 {
+  margin-top: 130px;
+}
+
+.Informacion {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+color:#ffffff ;
+font-size:12px;
+}
+.seccionInf {
+  height: 0px;
+  padding: 0px 0px;
+  margin-left: 800px;
+ 
+}
