@@ -52,6 +52,15 @@
     margin-right: auto;
     border-radius: 5%;
 }
+.InformacionTP {
+    width: 250px;
+    height: 60px;
+    border: 1px solid black;
+    background-color: rgb(67, 141, 109);
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 10%;
+}
 
 ul {
     list-style-type: square;
@@ -102,7 +111,15 @@ a {
    border-radius: 10%;
 
 }
-.Reseñas p{
-   
-}
+
+#miDiv h1 {
+    width: 250px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: rgb(67, 141, 109);
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 5%;
+    font-size: 14px;
+  }
 

@@ -3,6 +3,7 @@
 
 <head>
   <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/script.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Titanes del pacifico</title>
@@ -54,24 +55,28 @@
         producto editorial específico como un libro o una novela. Sin embargo, existen diferentes tipos de productos
         relacionados con la película, como cómics y libros de arte.</p>
 
-      <img src="img/Foto_informacion.png">
+      <img id="miImagen" src="img/Foto_informacion.png" alt="Imagen original">
+
+      <button onclick="cambiarImagen('porchee.png')">Cambiar Imagen</button>
+      <button onclick="restaurarImagen()">Restaurar Imagen</button>
     </div>
     <br>
     <div class="Reseñas">
 
-      <h2>Reseñas (Generales)</h2>
+      <h2 id="miTexto">Reseñas (Generales)</h2>
 
       <p><strong>Natalia Hernandez</strong> : Esta peli es muy chida! La recomiendo totalmente. Los efectos especiales
         son de 10, la historia para mí es decente y bueno, qué esperaban, está dirigida por Del Toro xd. De hecho esta
         peli
         me hizo amar la ciencia ficcion. Buenarda, con buenos personajes y gci demasiado epicardo
-        Un detalle: ¿por que no le pidieron dirigir la secuela? Esa si es una total deshonra a la primer película. Calificacion: &#9733;&#9733;&#9733;&#9733;</p>
+        Un detalle: ¿por que no le pidieron dirigir la secuela? Esa si es una total deshonra a la primer película.
+        Calificacion: &#9733;&#9733;&#9733;&#9733;</p>
 
       <p><strong>Nico Torres Argibay</strong> : Sinceramente los efectos especiales son increíbles, la banda sonora es
         épica y emotiva a la vez, pone los pelos de punta la primera vez que la escuchas, los actores están al 100% en
         sincronía con sus personajes sobretodo la actriz joven de unos 7 años que sale en el recuerdo de Makro cuando
         tiene visiones sobre su pasado por culpa del enlace neurológico, la recomiendo, te mantiene enganchado desde el
-        principio hasta el final.  Calificacion: &#9733;&#9733;&#9733;&#9733;</p>
+        principio hasta el final. Calificacion: &#9733;&#9733;&#9733;&#9733;</p>
 
       <p><strong>Santiago Carlos Ugarte Miranda</strong> : Amigos no les recomiendo en nada esta película, aqui van las
         razones:
@@ -80,17 +85,77 @@
 
         2. No te da mucha idea de como es la vida de los kaiyu y su mundo y eso no es bueno.
 
-        Bueno entre otras cosas eso le arruino la peli y de seguro todos concuerdan conmigo GRACIAS POR SU ATENCIÓN .  Calificacion: &#9733;&#9733;&#9733;&#9733;
+        Bueno entre otras cosas eso le arruino la peli y de seguro todos concuerdan conmigo GRACIAS POR SU ATENCIÓN .
+        Calificacion: &#9733;&#9733;&#9733;&#9733;
       </p>
 
       <p><strong>Luis Barrios</strong> : Me pareció brutal, divertida, y los efectos impresionantes, buenas actuaciones,
         y bien dirigida, es entretenida y no defrauda, si es verdad que es demasiado fantasiosa, pero es una película
         para pasarlo bien de acción y ciencia ficción, no es un echo real, pero es buena calidad, desde efectos,
-        dirección, montaje etc. Se la recomiendo a todo el mundo, un rotundo Si.  Calificacion: &#9733;&#9733;&#9733;&#9733;</p>
+        dirección, montaje etc. Se la recomiendo a todo el mundo, un rotundo Si. Calificacion:
+        &#9733;&#9733;&#9733;&#9733;</p>
     </div>
 
 
   </main>
+
+  <script>
+    function cambiarFondoDocumento() {
+      let body = document.getElementsByTagName("body")[0];
+      body.style.backgroundImage = "";
+      body.style.background = "red";
+    }
+
+    function cambiarTexto() {
+      var nuevoTexto = "Me gusta mucho la carrera aunque me cuesta pero estudio mucho para lograr aprender y terminarla";
+      document.getElementById("miParrafo").innerHTML = nuevoTexto;
+    }
+
+    var imagenOriginal = "img/Foto_informacion.png";
+    var imagenNueva = "porchee.png";
+    var imagen = document.getElementById("miImagen");
+
+    function cambiarImagen(nuevaImagen) {
+      imagen.src = nuevaImagen;
+    }
+
+    function restaurarImagen() {
+      imagen.src = imagenOriginal;
+    }
+
+    function ocultarMensaje() {
+      var mensaje = document.getElementById("mensaje");
+      mensaje.style.display = "none";
+    }
+
+    function escribirTexto() {
+      var div = document.getElementById("miDiv");
+      var mensaje = document.createElement("h1");
+      mensaje.textContent ="Este texto no lo escribió Carlos Benjamin, lo escribió JavaScript";
+      div.appendChild(mensaje);
+    }
+
+  </script>
+
+  <button id="cambiarFondoDocumento" onclick="cambiarFondoDocumento()">Cambiar fondo</button>
+  <br>
+  <br>
+  <h2 id="mensaje" style="color: chartreuse;">
+    Hola Mundo
+  </h2>
+  <button onclick="ocultarMensaje()">Ocultar mensaje</button>
+
+  <p id="miParrafo" class="InformacionTP">Hola me llamo Carlos Benjamin Diaz Pedroza Me gustan mucho los carros en
+    especial los porsche 911
+    turbo
+  </p>
+  <button onclick="cambiarTexto()">Cambiar Texto</button>
+  <br>
+  <br>
+  <div id="miDiv"></div>
+  <button onclick="escribirTexto()">Escribir en el div</button>
+
+
 
   <footer>
     <div class="Copy">
