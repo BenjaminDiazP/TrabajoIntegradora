@@ -92,20 +92,26 @@ footer p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-#boton {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-align: center;
-    justify-content: center;
-}
-
 #boton:hover {
     background-color: #555;
+}
+
+
+
+.boton-anterior,
+.boton-siguiente {
+  padding: 10px 20px;
+  background-color: #17bdd3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  
+}
+
+.boton-anterior:hover,
+.boton-siguiente:hover {
+  background-color: #17bdd3;
 }

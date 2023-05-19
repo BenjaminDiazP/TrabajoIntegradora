@@ -8,17 +8,33 @@ function Cambiartexto(){
     Texto.style.backgroundColor = "azul";
 }
 
-function cambiarImagen() {
-    var imagen = document.getElementById("imagen");
-    var rutaImagenActual = imagen.src;
-    var nombreImagenActual = rutaImagenActual.substring(rutaImagenActual.lastIndexOf("/") + 1);
-  
-    if (nombreImagenActual === "porscheimg1.png") {
-      imagen.src = "img/porschemg2.png";
-      imagen.alt = "Imagen 2";
-    } else {
-      imagen.src = "img/porscheimg1.png";
-      imagen.alt = "Imagen 1";
-    }
+
+var imagenes = ["img/img1.png", "img/img2.jpg", "img/img3.png", "img/img4.jpg", "img/img5.png"]; // Array con las rutas de las imágenes
+var indiceImagenActual = 0;
+
+function mostrarImagen() {
+  var imagen = document.getElementById("imagen");
+  imagen.src = imagenes[indiceImagenActual];
+  imagen.alt = "Imagen " + (indiceImagenActual + 1);
+}
+
+function imagenAnterior() {
+  if (indiceImagenActual === 0) {
+    indiceImagenActual = imagenes.length - 1;
+  } else {
+    indiceImagenActual--;
   }
-  
+  mostrarImagen();
+}
+
+function imagenSiguiente() {
+  if (indiceImagenActual === imagenes.length - 1) {
+    indiceImagenActual = 0;
+  } else {
+    indiceImagenActual++;
+  }
+  mostrarImagen();
+}
+mostrarImagen();
+
+window.onload = mostrarImagen; 
