@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Mostrar Datos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='estilos.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div>
+        <h1>Tus datos </h1>
+        <h1 id="mensaje1"></h1>
+        <h2 id="mensaje2"></h2>
+        <h3 id="mensaje4"></h3>
+        <p><a href="mailto:correo" id="mensaje3"></a></p>
+        <P><a href="tel:telefono" id="mensaje5"></a></P>
+        <p id="mensaje6"></p>
+        <p id="warningMessage"></p>
+        <p id="mensaje7"></p>
+        <p id="mensaje8"></p>
+
+    </div>
+
+
+    <script>
+        getParameter = (key) => {
+            address = window.location.search;
+            parameterList = new URLSearchParams(address);
+            return parameterList.get(key);
+        }
+        console.log(getParameter("nombre")); //jala lo que hay en el nombre lo que mete el usuario
+        console.log(getParameter("apellido"));
+        console.log(getParameter("correo"));
+        console.log(getParameter("fechanac"));
+        console.log(getParameter("Tel"));
+        console.log(getParameter("usuario"));
+        console.log(getParameter("contra"));
+        console.log(getParameter("contras"));
+
+
+        var nombre = getParameter("nombre");// nombre va a tomar la variable  que ingresa el usuario en el campo  nombre o ya sea otro
+        var apellido = getParameter("apellido");
+        var correo = getParameter("correo");
+        var cumpleanos = getParameter("fechanac");
+        var Tel = getParameter("Tel");
+        var usuario = getParameter("usuario");
+        var contra = getParameter("contra");
+        var contras = getParameter("contras");
+
+
+        if (nombre != null && apellido != null) {
+            document.getElementById("mensaje1").innerHTML = nombre //este chaco sustituy el valor que hay en h1 esto mediante el id 
+            document.getElementById("mensaje2").innerHTML = apellido
+            document.getElementById("mensaje3").innerHTML = correo
+            document.getElementById("mensaje5").innerHTML = Tel
+            document.getElementById("mensaje6").innerHTML = usuario
+            document.getElementById("mensaje7").innerHTML = contra
+            if (contra.length < 5) {
+                alert("Advertencia: la contraseña debe tener al menos 5 caracteres.");
+                document.getElementById("warningMessage").innerHTML = "Advertencia: la contraseña debe tener al menos 5 caracteres.";
+            }
+
+            document.getElementById("mensaje8").innerHTML = contras
+            //////////////////////////////////Calcular la edad desde la fecha///////////////////////////////////
+            var cadena = cumpleanos;
+            var arraySubcadenas = cadena.split("/"); // Dividir la cadena en subcadenas usando la coma como separador
+            var edad = 2023 - parseInt(arraySubcadenas[2]);
+            document.getElementById("mensaje4").innerHTML = "Edad " + edad + " años";
+            //////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        }
+
+
+
+
+
+
+        
+        var cadena = "Hola, cómo estás?";
+            var arraySubcadenas = cadena.split(","); // Dividir la cadena en subcadenas usando la coma como separador
+
+            console.log(arraySubcadenas[0]);
+            console.log(arraySubcadenas[1]);
+
+    </script>
+
+
+</body>
+
+</html>
